@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "head": {
+            "titile": "Title",
+            "description": "Text",
+            "bgImage": "link",
+            "foodImage": "link2"
+        },
+        "body": {
+            "titile": "Title",
+            "structure": ["ingredient1", "ingredient2", "ingredient3"],
+            "description": "Text",
+            "foodImage": "link2"
+        }
+    }
+]
