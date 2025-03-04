@@ -1,0 +1,22 @@
+@layer main, reset;
+@import "globals.scss";
+@import "_reset.scss";
+
+
+@layer main {
+    
+    .major_block_wrapper {
+        min-height: 100vh;
+        background-color: aqua;
+    
+        position: relative;
+    }
+    
+    .major_block {
+        background-color: $fireTheme;
+        
+    }
+}
+
+
+

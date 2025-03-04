@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { Routes, Route } from 'react-router-dom'
-import { Fire } from '../pages/Fire';
-import { Water } from '../pages/Water';
-import { Earth } from '../pages/Earth';
-import { Air } from '../pages/Air';
+import { Fire } from '../../pages/Fire';
+import { Water } from '../../pages/Water';
+import { Earth } from '../../pages/Earth';
+import { Air } from '../../pages/Air';
+import styles from "./style.module.scss";
+
 
 export interface IMainProps {
 }
 
 export function Main (props: IMainProps) {
   return (
-    <main>
+    <main className={styles.header}>
       <Routes>
         <Route path='fire' element={<Fire/>}/>
         <Route path='water' element={<Water/>}/>
