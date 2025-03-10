@@ -1,0 +1,31 @@
+[
+    {
+        "id": 0,
+        "head": {
+            "title": "TitleAir",
+            "bgImage": "/card/air/bg-1.jpg",
+            "foodImage": "/card/air/food-1.jpg"
+        },
+        "body": {
+            "title": "Title",
+            "structure": ["ingredient1", "ingredient2", "ingredient3"],
+            "description": "Text",
+            "foodImage": "link2"
+        }
+    },
+    {
+        "id": 1,
+        "head": {
+            "title": "Title1",
+            "bgImage": "/card/air/bg-2.jpg",
+            "foodImage": "/card/air/food-2.jpg"
+        },
+        "body": {
+            "title": "Title",
+            "structure": ["ingredient1", "ingredient2", "ingredient3"],
+            "description": "Text",
+            "foodImage": "link2"
+        }
+    }
+    
+]

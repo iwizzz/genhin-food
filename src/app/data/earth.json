@@ -2,12 +2,13 @@
     {
         "id": 0,
         "head": {
-            "bgImage": "/cards/fire/bg-1.webp",
-            "foodBg": "/cards/food-bg-green.webp",
-            "foodImage": "/cards/fire/food-1.png"
+            "title": "TitleEarth",
+            "description": "Text",
+            "bgImage": "link",
+            "foodImage": "link2"
         },
         "body": {
-            "title": "Рокерская курятина от Синь Янь",
+            "title": "Title",
             "structure": ["ingredient1", "ingredient2", "ingredient3"],
             "description": "Text",
             "foodImage": "link2"
@@ -17,8 +18,9 @@
         "id": 1,
         "head": {
             "title": "Title1",
-            "bgImage": "/card/bg-1.webp",
-            "foodImage": "/card/fire/food-2.jpg"
+            "description": "Text",
+            "bgImage": "link",
+            "foodImage": "link2"
         },
         "body": {
             "title": "Title",
@@ -30,23 +32,10 @@
     {
         "id": 2,
         "head": {
-            "title": "Title1",
-            "bgImage": "/card/fire/bg-3.jpg",
-            "foodImage": "/card/fire/food-3.jpg"
-        },
-        "body": {
-            "title": "Title",
-            "structure": ["ingredient1", "ingredient2", "ingredient3"],
+            "title": "Title2",
             "description": "Text",
+            "bgImage": "link",
             "foodImage": "link2"
-        }
-    },
-    {
-        "id": 3,
-        "head": {
-            "title": "Title1",
-            "bgImage": "/card/fire/bg-4.jpg",
-            "foodImage": "/card/fire/food-4.jpg"
         },
         "body": {
             "title": "Title",
