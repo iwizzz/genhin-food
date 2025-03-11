@@ -17,12 +17,12 @@ export interface IElementProps {
 
 export interface IMainProps {
   setloadingFoodPageState: Function,
-  loadingFoodPageState: boolean,
+  loadingFoodPageState: string,
   data: IDataElement[][],
 }
 
 export function Main (props: IMainProps) {
-  const [foodPageData, setFoodPageData] = React.useState<IDataElement[]>([]);
+  const [foodPageData, setFoodPageData] = React.useState<IDataElement>({} as IDataElement);
   
 
   React.useEffect(() => { 
@@ -39,14 +39,14 @@ export function Main (props: IMainProps) {
  
 
   return (
-    <main className={styles.header}>
+    <main className={styles.main}>
       <Routes>
         <Route path='/' element={<Fire data={props.data[0]} setFoodData={setFoodPageData} setloadingFoodPageState={props.setloadingFoodPageState}/>} />
         <Route path='water' element={<Water data={props.data[1]} setFoodData={setFoodPageData} setloadingFoodPageState={props.setloadingFoodPageState}/>} />
         <Route path='earth' element={<Earth data={props.data[2]} setFoodData={setFoodPageData} setloadingFoodPageState={props.setloadingFoodPageState}/>} />
         <Route path='air' element={<Air data={props.data[3]}setFoodData={setFoodPageData} setloadingFoodPageState={props.setloadingFoodPageState}/>} />
 
-        <Route path='/food-page' element={<FoodPage loadingFoodPageState={props.loadingFoodPageState} setloadingFoodPageState={props.setloadingFoodPageState}/>}/>
+        <Route path='/food-page' element={<FoodPage data={foodPageData} loadingFoodPageState={props.loadingFoodPageState} setloadingFoodPageState={props.setloadingFoodPageState}/>}/>
       </Routes>
     </main>
   );

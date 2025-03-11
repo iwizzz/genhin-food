@@ -5,15 +5,7 @@ import { IDataElement } from '@/app/page';
 
 
 export interface ICardProps {
-  data: {
-    id: number,
-    head: {
-      foodImage?: string,
-      foodBg?: string,
-      bgImage?: string
-    },
-    body: {},
-  },
+  data: IDataElement
   setFoodData: Function, 
   setloadingFoodPageState: Function, 
 }
@@ -23,8 +15,9 @@ export function Card (props: ICardProps) {
   const path:string = "/food-page";
 
   async function loadFoodPageData () {
-    await props.setFoodData(props.data.body);
-    props.setloadingFoodPageState(false);
+    await props.setFoodData(props.data);
+    
+    props.setloadingFoodPageState("done");
   }
   
   return (

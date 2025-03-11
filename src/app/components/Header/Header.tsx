@@ -14,16 +14,16 @@ export function Header (props: IHeaderProps) {
       <div className={styles.container}>
       
         <nav className={styles.nav}>
-          <Link to="/" onClick={() => props.setloadingFoodPageState(true)}> 
+          <Link to="/" onClick={() => props.setloadingFoodPageState("loading")}> 
             <img className={styles.icon_fire} src="/elementPyro.svg" alt="" />
           </Link>
-          <Link to="water" onClick={() => props.setloadingFoodPageState(true)}>
+          <Link to="water" onClick={() => props.setloadingFoodPageState("loading")}>
             <img className={styles.icon_water} src="/elementHydro.svg" alt="" />
           </Link>
-          <Link to="earth" onClick={() => props.setloadingFoodPageState(true)}>
+          <Link to="earth" onClick={() => props.setloadingFoodPageState("loading")}>
             <img className={styles.icon_earth} src="/elementGeo.svg" alt="" />
           </Link>
-          <Link to="air" onClick={() => props.setloadingFoodPageState(true)}>
+          <Link to="air" onClick={() => props.setloadingFoodPageState("loading")}>
             <img className={styles.icon_air} src="/elementAmeno.svg" alt="" />
           </Link>
         </nav>

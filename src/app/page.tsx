@@ -7,13 +7,24 @@ import { Main } from "./components/Main/Main";
 import { Footer } from "./components/Footer/Footer";
 
 export interface IDataElement {
-  id:number,
-  head:{},
-  body:{},
+
+    id:number,
+  head:{
+    foodImage: string,
+    foodBg: string,
+    bgImage: string
+  },
+  body:{
+    cookingMethod: string,
+    realFoodImage: string,
+    structure: string,
+    title: string,
+  },
+  
 }
 export default function Home() {
   const [data, setData] = React.useState<IDataElement[][]>([]);
-  const [loadingFoodPageState, setloadingFoodPageState] = React.useState(true);
+  const [loadingFoodPageState, setloadingFoodPageState] = React.useState("loading");
   React.useEffect(() => {
     postData();
       
