@@ -1,12 +1,12 @@
 @import "../../../styles/globals.scss";
 
 .list_item {
-    background-color: red;
+
     // border: 1px solid black;
     height: 450px;
 
     background-size: cover;
-    background-position: top -100px center;
+    background-position: top -80px center;
     background-repeat: no-repeat;
 
     
@@ -58,18 +58,15 @@
     right: 0px;
 
     width: 100%;
-    height: 100px;
+    height: 120px;
 
     overflow: hidden;
 
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, .16);
+
    
-
-    // background-image: url("/cards/food-bg-green.webp");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    opacity: 1;
 
 
     img {
@@ -79,7 +76,7 @@
         height: 150px;
        
         margin: 0 auto;
-        margin-top: -35px;
+        margin-top: -15px;
 
     }
 

@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import { CardList } from './CardList/CardList';
 import styles from "./style.module.scss";

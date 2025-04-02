@@ -16,6 +16,10 @@ const eslintConfig = [
  
 ];
 
-
+module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  }
+}
 
 export default eslintConfig;

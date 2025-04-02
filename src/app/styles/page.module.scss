@@ -4,12 +4,47 @@
 
 
 @layer main {
+
+    .bg_video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+
+        &::after {
+            background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 27.08%, rgba(0, 0, 0, .125) 100%);
+            content: "";
+            display: block;
+            height: 100vh;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+        }
+        pointer-events: none;
+
+        video, embed {
+            object-fit: cover;
+            height: 100vh;
+            width: 100vw;
+            
+
+            pointer-events: none;
+        }
+    }
     
     .major_block_wrapper {
         min-height: 100vh;
-        background-color: aqua;
+    
     
         position: relative;
+
+        display: none;
+        
     }
     
     .major_block {

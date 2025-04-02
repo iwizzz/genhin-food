@@ -1,4 +1,5 @@
 'use client'
+
 import styles from "./styles/page.module.scss";
 import * as React from 'react';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
@@ -6,28 +7,32 @@ import { Header } from "./components/Header/Header";
 import { Main } from "./components/Main/Main";
 import { Footer } from "./components/Footer/Footer";
 
+
 export interface IDataElement {
 
-    id:number,
+  id:number,
   head:{
     foodImage: string,
-    foodBg: string,
     bgImage: string
   },
   body:{
-    cookingMethod: string,
-    realFoodImage: string,
-    structure: string,
+    cookingMethod: string[],
+    structure: string[],
     title: string,
+    effectDescription: string,
+    cardDescription: string,
+    foodType: string,
+    realFoodPicUrlsList: string[]
   },
   
 }
 export default function Home() {
   const [data, setData] = React.useState<IDataElement[][]>([]);
   const [loadingFoodPageState, setloadingFoodPageState] = React.useState("loading");
+  const [mainBgSrc, mainBgSrcSet] = React.useState<string>("./elementPyroBG.mp4");
   React.useEffect(() => {
     postData();
-      
+    pullBgSrc();  
   },[])
     
   async function postData() {
@@ -39,28 +44,46 @@ export default function Home() {
    
   }
 
+  async function pullBgSrc() {
+    const src = await window.localStorage.getItem("bgSrc");
+    mainBgSrcSet(src as string);
+  }
+
   
   
  
   return (
-    <HashRouter>
-        <div className={styles.wrapper}>
-            <div className={styles.major_block_wrapper}>
-             
-              <div className={styles.major_block}>
-                <div className={styles.container}>
-                  
-                </div>
+    <html lang="en" className={styles.html}>
+      <body>
+        {
+           <HashRouter>
+           <div className={styles.wrapper} style={{cursor: "url(./genshinCursor.png), auto"}}>
+             <div className={styles.bg_video}>
+               <video src={mainBgSrc}  preload="auto" autoPlay muted loop playsInline>
+               </video>
+             </div>
+             {/* Этот блок временно отключен, а может и не временно */}
+               <div className={styles.major_block_wrapper}>
                 
-              </div>
-              <Header setloadingFoodPageState={setloadingFoodPageState}/>
-            </div>
-            <Main data={data} setloadingFoodPageState={setloadingFoodPageState} loadingFoodPageState={loadingFoodPageState}/>
-            <Footer />
-        
-
-        </div>
-    </HashRouter>
+                 <div className={styles.major_block}>
+                   <div className={styles.container}>
+                     
+                   </div>
+                   
+                 </div>
+               </div>
+               <Header setloadingFoodPageState={setloadingFoodPageState} mainBgSrcSet={mainBgSrcSet}/>
+   
+               <Main data={data} setloadingFoodPageState={setloadingFoodPageState} loadingFoodPageState={loadingFoodPageState} />
+               <Footer />
+           
+   
+           </div>
+       </HashRouter>
+        }
+      </body>
+    </html>
+   
     
   );
 }

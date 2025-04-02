@@ -1,7 +1,187 @@
 @import "../../styles/globals.scss";
 
-.p {
-    width: 1000px;
-    height: 1000px;
-    background-color: red;
+//Элементы игнорируют паддинг и приливают к границе
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+
+
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 40px;
+
+
+
+
+  @media (max-width: 1024px) {
+
+    flex-direction: column;
+  }
 }
+
+.food_card {
+  flex: 1 1;
+
+
+  height: fit-content;
+
+  max-width: 400px;
+
+  background-color: $bgWhite;
+
+  padding-bottom: 20px;
+
+  @media (max-width: 1024px) {
+    order: -1;
+    margin: 0 auto;
+  }
+}
+
+.img_container {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+
+  p {
+    font-size: 26px;
+
+    background-color: $bgGreen;
+    padding: 15px 0;
+  }
+}
+
+.food_img {
+  margin: 0 auto;
+  width: 250px;
+  height: auto;
+  
+}
+
+.card_list, .card_description {
+  color: $blackText;
+
+  font-size: 14px;
+  
+  padding: 0 20px;
+
+  margin-top: 20px;
+
+}
+
+.card_description {
+
+ 
+}
+
+.card_list {
+  display: grid;
+  grid-template-columns: min-content auto;
+
+  gap: 20px;
+
+  
+
+  li:nth-child(2n-1) {
+    font-weight: 700;
+  }
+  
+}
+
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+
+  width: 100%;
+
+  flex: 1 1;
+
+
+
+  @media (max-width: 1024px) {
+    h2 {
+      text-align: center;
+    }
+
+    
+    
+  }
+
+
+ 
+  ul {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+
+    li {
+     
+    }
+  }
+  
+}
+
+.structure {
+  @media (max-width: 1024px) {
+    text-align: center;
+   
+    ul {
+      list-style: none;
+    }
+    
+  }
+}
+
+.title_h2 {
+    
+}
+
+.title_h3 {
+  margin-top: 30px;
+}
+
+.list_circle {
+
+}
+
+.list_num {
+  width: 100%;
+
+  list-style: decimal;
+  
+  padding-left: 20px;
+
+  li {
+    
+  }
+}
+
+.real_food_photo_list {
+  grid-column: span 2;
+
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 400px);
+  
+  flex: 1 1 100%;
+
+
+
+
+  & img {
+    width: 100%;
+    
+  }
+}
+
+

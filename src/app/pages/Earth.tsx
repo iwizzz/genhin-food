@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import { IElementProps } from '../components/Main/Main';
 import { CardList } from './CardList/CardList';

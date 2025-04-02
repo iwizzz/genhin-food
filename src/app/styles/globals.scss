@@ -1,16 +1,68 @@
-$fireTheme: red;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$blackText: #000;
+$bgWhite: #F6F2EC;
+$fireTheme: rgb(219, 16, 16);
 $airTheme: green;
 $waterTheme: green;
 $earthTheme: green;
+$bgGreen: #2a9072;
+$mainThemBg: $fireTheme;
+
+
+  @font-face {
+    font-family: "Genshin-Font";
+    src: url('/fonts/Genshin_Impact.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+.html {
+    body {
+        font-family: "Rubik", sans-serif;
+        background-color: black;
+
+
+        video::-webkit-media-controls { display: none; }
+
+        track {
+            display: none;
+        }
+         
+        p {
+            line-height: 120%;
+
+        }
+       
+    }
+    h2 {
+        font-size: 42px;
+        font-family: "Genshin-Font", sans-serif;
+    }
+
+    h1 {
+
+    }
+        
+   
+    
+    h3 {
+        font-size: 28px;
+
+
+    }
+}
 
 
 .wrapper {
-
+    position: relative;
+    z-index: 1;
 
     width: 100%;
-    min-width: 100vw;
+    max-width: 100vw;
     height: 100%;
-    min-width: 100vh;
+
 }
 
 .container {
@@ -18,7 +70,7 @@ $earthTheme: green;
     width: 100%;
 
     margin: 0 auto ;
-    padding: 0 15px;
+    padding: 0 30px;
 
    
 }

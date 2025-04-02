@@ -1,18 +1,23 @@
 @import "../../styles/globals.scss";
 
 .header {
-    background-color: #fff;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    background: rgba(0, 0, 0, .16);
 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    z-index: 5;
     
     width: 100%;
+
+    padding: 10px 0;
 
 }
 
 .nav {
+ 
+
     display: flex;
     gap: 20px;
 

@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import styles from "./style.module.scss";
 import { Card } from './Card/Card';
@@ -13,7 +14,7 @@ export function CardList (props: ICardListProps) {
 
   return (
     <ul className={styles.list}>
-      {props.data?.length != 0 ?
+      {props.data?.length > 0 ?
         props.data?.map((element) => {
           return(
             <Card key={element.id} data={element} setFoodData={props.setFoodData} setloadingFoodPageState={props.setloadingFoodPageState}/>

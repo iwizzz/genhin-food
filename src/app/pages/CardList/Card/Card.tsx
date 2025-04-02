@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import styles from "./style.module.scss";
 import { Link } from 'react-router-dom';
@@ -15,6 +16,7 @@ export function Card (props: ICardProps) {
   const path:string = "/food-page";
 
   async function loadFoodPageData () {
+    await window.localStorage.setItem("foodPageData", JSON.stringify(props.data)); 
     await props.setFoodData(props.data);
     
     props.setloadingFoodPageState("done");
@@ -23,7 +25,7 @@ export function Card (props: ICardProps) {
   return (
     <Link to="/food-page" onClick={loadFoodPageData}>
       <li className={styles.list_item} style={{backgroundImage: `url(${props.data.head.bgImage})`}}>
-        <div className={styles.food_img} style={{backgroundImage: `url(${props.data.head.foodBg})`}}>
+        <div className={styles.food_img} >
           <img src={props.data.head.foodImage} alt="" />
         </div>
       </li>
